@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./public/MiMo2API_Banner.webp" alt="MiMo2API Banner" width="100%">
+
 # MiMo2API
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
