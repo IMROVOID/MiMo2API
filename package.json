@@ -1,0 +1,32 @@
+{
+  "name": "mimo2api",
+  "version": "1.0.0",
+  "description": "OAuth to OpenAI-compatible API router for MiMo Code Desktop and Free Preview MiMo X models",
+  "type": "module",
+  "bin": {
+    "mimo2api": "./dist/cli.js"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/**/*.test.ts",
+    "build": "tsx scripts/build.ts",
+    "start": "tsx src/cli/index.ts start"
+  },
+  "keywords": [
+    "mimo",
+    "mimo-code",
+    "openai",
+    "oauth",
+    "router",
+    "proxy",
+    "cloudflare-workers"
+  ],
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^26.6.1",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs & Bundles
+/dist/
+/build/
+/out/
+/worker/
+*.tsbuildinfo
+*.js.map
+*.d.ts.map
+*.bundle.js
+
+# Serverless, Bundler & Framework Caches
+.wrangler/
+.vercel/
+.turbo/
+.cache/
+.esbuild/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Logs & Debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test & Coverage
+coverage/
+.nyc_output/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Editor & IDE Directories
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary Files
+*.tmp
+tmp/
