@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "description": "OAuth to OpenAI-compatible API router for MiMo Code Desktop and Free Preview MiMo X models",
   "type": "module",
+  "main": "./dist/cli.js",
   "bin": {
-    "mimo2api": "./dist/cli.js"
+    "mimo2api": "dist/cli.js"
   },
+  "files": [
+    "dist",
+    "worker",
+    "public",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/**/*.test.ts",
     "build": "tsx scripts/build.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
     "start": "tsx src/cli/index.ts start"
   },
   "keywords": [
@@ -21,8 +30,16 @@
     "proxy",
     "cloudflare-workers"
   ],
-  "author": "",
+  "author": "IMROVOID",
   "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMROVOID/MiMo2API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IMROVOID/MiMo2API/issues"
+  },
+  "homepage": "https://github.com/IMROVOID/MiMo2API#readme",
   "devDependencies": {
     "@types/node": "^26.6.1",
     "esbuild": "^0.28.2",
