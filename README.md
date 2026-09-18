@@ -5,6 +5,7 @@
 # MiMo2API
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![npm version](https://img.shields.io/npm/v/mimo2api.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/mimo2api)
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D22.0.0-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
@@ -73,9 +74,23 @@ However, access to these free preview quotas is locked behind Xiaomi's OAuth aut
 
 Install and log into the [Xiaomi MiMo Desktop](https://github.com/XiaomiMiMo/MiMo-Code) application. This saves your OAuth session in `auth.json`.
 
+Install globally via npm:
+
+```bash
+npm install -g mimo2api
+```
+
+Or run directly with npx without installation.
+
 #### Step 2: Check Authentication
 
 Test if your local credentials are detected:
+
+```bash
+mimo2api check
+```
+
+Or via npx:
 
 ```bash
 npx mimo2api check

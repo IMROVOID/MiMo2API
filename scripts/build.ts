@@ -37,7 +37,7 @@ async function build(): Promise<void> {
 
   console.log(`✓ CLI bundled: dist/cli.js (${(cliStats.size / 1024).toFixed(1)} KB)`);
   console.log(`✓ Worker bundled: worker/worker.js (${(workerStats.size / 1024).toFixed(1)} KB)`);
-  console.log("[MiMo2API] Build completed successfully! 🎉\n");
+  console.log("[MiMo2API] Build completed successfully!\n");
 }
 
 build().catch((err) => {
