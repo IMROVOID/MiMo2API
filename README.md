@@ -6,6 +6,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![npm version](https://img.shields.io/npm/v/mimo2api.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/mimo2api)
+[![CI](https://github.com/IMROVOID/MiMo2API/actions/workflows/test.yml/badge.svg)](https://github.com/IMROVOID/MiMo2API/actions/workflows/test.yml)
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D22.0.0-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
@@ -891,6 +892,9 @@ MiMo2API/
 ├── tests/                       # 36 automated unit & integration tests
 ├── scripts/
 │   └── build.ts                 # esbuild build pipeline
+├── .github/
+│   └── workflows/
+│       └── test.yml             # Automated CI workflow with skip test flags
 ├── package.json
 └── tsconfig.json
 ```
@@ -947,6 +951,22 @@ Build standalone bundles:
 ```bash
 npm run build
 ```
+
+### Continuous Integration (CI)
+
+Every commit and pull request runs automated verification through the [Test & Verify](.github/workflows/test.yml) GitHub Actions workflow (Node.js 22):
+- **Typecheck**: `npm run typecheck`
+- **Unit & Integration Tests**: `npm test`
+- **Bundle Verification**: `npm run build`
+
+#### Skipping Automated Tests
+
+To skip the test suite on specific commits (e.g. for docs updates, asset additions, or fast iterations while still verifying types and builds), include any of the following tags in the commit message:
+
+- `[skip test]` or `[skip tests]`
+- `[skip-test]` or `[skip-tests]`
+
+When triggered manually via **Actions** -> **Run workflow**, check the **Skip running automated tests** input option.
 
 ## Disclaimer & Legal Notice
 
